@@ -1,0 +1,77 @@
+#include <stdio.h>
+int matriz [10][10];
+int matriz2 [10][10];
+int res [10][10];
+int N1,N2,N3,N4,h,i,j;
+int main ()
+{
+		printf ("Programa que multiplique matrices\n");
+	printf ("Número de filas, matriz 1\n");
+	scanf ("%d", &N1);
+	printf ("Número de columnas, matriz 1\n");
+	scanf ("%d",&N2);
+	printf ("Número de filas, matriz 2\n");
+	scanf ("%d", &N3);
+	printf ("Número de filas, matriz 2\n");
+	scanf ("%d", &N3);
+	
+		if (N3>=N2)
+			{
+				for (i=1; i=N1;i++)
+				{
+					for  (j=1;j<=N2;j++)
+					{
+						printf ("Matriz: ");
+						scanf ("%d", &matriz [i][j]);
+					}
+				}
+			
+			}
+		printf ("\n");
+		for (i=1; i<=N3;i++)
+		{
+			for (j=1; i<=N4;j++)
+			{
+				printf ("Matriz 2: ");
+				scanf ("%d", &matriz2 [i][j]);
+			}
+		}	
+			for (i=1; i<=N1;i++)
+			{
+				for (j=1;j<=N4;j++)
+				{
+					res[i][j]=0;
+					for (h=1;h<=N2;h++)
+					{
+						res[i][j]=(res[i][j]+(matriz[i][h]*matriz2[h][j]));
+					}
+				}
+			}
+		printf ("\n\nMatriz 1:\n");
+		for (i=1;i<=N1;i++)
+			{
+				for (i=1;i<=N2;j++)
+				{
+					printf ("4%d", matriz [1][j]);
+				}
+				printf ("\n");
+			}
+			printf ("\n\nMatriz 2:\n");
+			for (i=1;i<=N3;i++)
+			{
+				for (j=1;j<=N4;j++)
+				{
+					printf ("4%d", matriz2[i][j]);
+				}
+				printf ("\n");
+			}
+			printf ("\n\nResultado:\n");
+			for (i=1;i<=N1;i++)
+			{
+				printf ("\n");
+				for (j=1;i<=N4;j++)
+				{
+					printf ("4%d", res[i][j]);
+				}
+			}
+}
